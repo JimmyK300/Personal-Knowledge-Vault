@@ -1,0 +1,323 @@
+{
+  "main": {
+    "id": "7eea53be2645e8a7",
+    "type": "split",
+    "children": [
+      {
+        "id": "4e4c5d9664805228",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3d780a8d52073dfd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_Inbox/2026-02-16.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-02-16"
+            }
+          },
+          {
+            "id": "c00c9b07d7110133",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_Inbox/2026-02-16.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-02-16"
+            }
+          },
+          {
+            "id": "abc92659fe48ec88",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Skill learning system/99_System/Re-entry Checklist.md.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Re-entry Checklist.md"
+            }
+          },
+          {
+            "id": "4930fb8e41bde944",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Skill learning system/01_Contexts/Motivational stuff.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Motivational stuff"
+            }
+          },
+          {
+            "id": "5665225c63cf4f7f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_Inbox/2026-02-16.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-02-16"
+            }
+          },
+          {
+            "id": "6117806741fc7428",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Skill learning system/03_Reference/Idea Throughput Problem — Capture System Design.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Idea Throughput Problem — Capture System Design"
+            }
+          },
+          {
+            "id": "43f011c8cd1f9297",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Plans/Milestones.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Milestones"
+            }
+          },
+          {
+            "id": "bce09a034fca0875",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "dl_sprint/week1_math/variance-bias-gradient.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "variance-bias-gradient"
+            }
+          }
+        ],
+        "currentTab": 7
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f8df05d5314df5ba",
+    "type": "split",
+    "children": [
+      {
+        "id": "7d9358109d698ec0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "10be4bf0bac40ae2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "142bc8eb340400c8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "8d9c94b53639b661",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "80dce125b3b97f7b",
+    "type": "split",
+    "children": [
+      {
+        "id": "c6bf7f4627d5824a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "33733009cb3ee78d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Pilot.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Pilot"
+            }
+          },
+          {
+            "id": "56352443cf485d32",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Pilot.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Pilot"
+            }
+          },
+          {
+            "id": "54b2addac9a3dedc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "38550224ce786bd6",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "81e86684b12095f9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Pilot.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Pilot"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "bce09a034fca0875",
+  "lastOpenFiles": [
+    "Plans/23-2-2026 Research into AI Compression + Internal Reasoning.md",
+    "Plans/Vision.md",
+    "Plans/Milestones.md",
+    "dl_sprint/week1_math/variance-bias-gradient.md",
+    "Skill learning system/99_System/Weekly Review.md.md",
+    "Skill learning system/99_System/System Principles.md.md",
+    "Skill learning system/99_System/Skill Template.md.md",
+    "Skill learning system/99_System/Re-entry Checklist.md.md",
+    "Skill learning system/99_System/Deletion Policy.md.md",
+    "Skill learning system/99_System/Context Template.md.md",
+    "Skill learning system/99_System/AI Usage Rules.md.md",
+    "Skill learning system/03_Reference/Optimization Discussion.md",
+    "Vision.md",
+    "Milestones.md",
+    "Daily/YYYY-MM-DD.md (template).md",
+    "Daily/2026-02-15.md",
+    "Weekly checklist.md",
+    "Skill learning system/01_Contexts/Personal skills.md",
+    "Skill learning system/01_Contexts/Motivational stuff.md",
+    "Skill learning system/01_Contexts/Soft optimization skills.md",
+    "Skill learning system/03_Reference/Idea Throughput Problem — Capture System Design.md",
+    "00_Inbox/2026-02-16.md",
+    "00_Inbox/2026-02-15.md",
+    "Daily",
+    "Skill learning system/Pilot.md",
+    "Skill learning system",
+    "Untitled.canvas",
+    "Untitled.base",
+    "2026-01-20.md",
+    "Skill learning system/03_Reference",
+    "Skill learning system/02_Skills",
+    "Skill learning system/01_Contexts",
+    "Welcome.md",
+    "Skill learning system/99_System",
+    "00_Inbox"
+  ]
+}
