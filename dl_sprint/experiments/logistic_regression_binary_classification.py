@@ -7,7 +7,7 @@ def loss(y, p):
 def sigmoid(z):
   return 1/(1+np.exp(-z))
 
-lr = 30
+lr = 0.01
 
 # Each iteration:
 
@@ -40,7 +40,7 @@ b = 0.0
 
 L = []
 
-for epoch in range(10):
+for epoch in range(1000):
   Z =  np.array(X) @ np.array(w) + b
 
   P = sigmoid(Z)
@@ -65,6 +65,7 @@ print("Final loss:", L[-1])
 print("Accuracy:", accuracy)
 
 plt.plot(L)
+plt.yscale('log')
 plt.xlabel("Epoch")
 plt.ylabel("Loss")
 plt.title("Training Loss")
