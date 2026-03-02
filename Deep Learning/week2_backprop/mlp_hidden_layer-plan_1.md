@@ -59,3 +59,5 @@ for epoch in range(1000):
       # derive back prop hidden layer
       dw2 = 2(y-p)*z1.T + b2*z2
       //getting a little confused
+
+This one is failure. 
