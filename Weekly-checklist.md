@@ -46,7 +46,7 @@ Fallback rule:
 
 - [ ] CNN: one working implementation improvement, debug note, or concept note
 - [ ] Discrete: one finished solved set or explanation from the existing plan
-- [ ] Calculus: one finished derivation or explanation from the existing plan
+- [ ] Calculus: Chapter 1 finished
 - [ ] Evaluation metrics: one reusable draft section for the paper
 
 ## Weekly Rule
@@ -54,10 +54,4 @@ Fallback rule:
 - [ ] Keep the week limited to these four tracks only
 - [ ] Produce one concrete artifact for each study track
 - [ ] Use daily notes for day-specific blocks; do not expand this file midweek
-
-## Done When
-
-- [ ] CNN notes or implementation is clearer than it was at the start of the week
-- [ ] Discrete math has one finished explanation or solved set
-- [ ] Calculus has one finished explanation or derivation
-- [ ] Evaluation metrics section is finished enough to reuse in the paper
+- [ ] Keep detailed session tasks in Daily/2026-03-09.md
