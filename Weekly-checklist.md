@@ -1,296 +1,63 @@
-# Week 1 — Linear Algebra + Optimization Foundations
+# Weekly Checklist
 
-Goal: Understand what the network is _computing_ and how parameters move.
+## Next Week Focus
 
----
+- [ ] CNN using NumPy
+- [ ] Discrete math
+- [ ] Calculus
+- [ ] Finish evaluation metrics on own research paper
 
-## 1. Vectors & Geometry (Day 1)
+## Weekly Block Choice
 
-You must understand:
+Recommended block: 5 focused study days, 4 hours per day, weekend kept open for catch-up or rest.
 
-- Vector as point vs direction
-    
-- Dot product  
-    [  
-    x \cdot w = \sum_i x_i w_i  
-    ]
-    
-- Norms (L1, L2)
-    
-- Angle & cosine similarity
-    
+Why this block:
 
-Why it matters:  
-A neuron is just:  
-[  
-z = w \cdot x + b  
-]
+- CNN and calculus are the heaviest tracks, so they each get three separate sessions.
+- Discrete and evaluation metrics are lighter, so they fit cleanly into two sessions each.
+- A 5-day structure is easier to protect than a 6- or 7-day plan.
 
-Deliverable:
+## Next Week Schedule
 
-- Compute dot product manually
-    
-- Visualize 2D linear classifier decision boundary
-    
+Target total: 20 hours
 
----
+- Monday: 2h CNN + 2h Calculus
+- Tuesday: 2h Discrete + 2h Evaluation metrics
+- Wednesday: 2h CNN + 2h Calculus
+- Thursday: 2h Discrete + 2h Evaluation metrics
+- Friday: 2h CNN + 2h Calculus
+- Saturday: open buffer or rest
+- Sunday: weekly review and reset only
 
-## 2. Matrix Multiplication & Shapes (Day 2)
+Hour totals:
 
-Topics:
+- CNN: 6h
+- Discrete: 4h
+- Calculus: 6h
+- Evaluation metrics: 4h
 
-- Matrix multiplication rules
-    
-- Shape reasoning
-    
-- Batch dimension intuition
-    
-- Transpose
-    
+Fallback rule:
 
-You must be able to answer instantly:
+- If one weekday block is missed, move only one 2h block to Saturday.
+- Do not expand the week beyond 22 total hours.
+- If two blocks are missed, drop the least critical block instead of trying to recover everything.
 
-If:
+## Deliverables For This Week
 
-- X ∈ ℝ^(batch × features)
-    
-- W ∈ ℝ^(features × hidden)
-    
+- [ ] CNN: one working implementation improvement, debug note, or concept note
+- [ ] Discrete: one finished solved set or explanation from the existing plan
+- [ ] Calculus: one finished derivation or explanation from the existing plan
+- [ ] Evaluation metrics: one reusable draft section for the paper
 
-Then:  
-Output ∈ ℝ^(batch × hidden)
+## Weekly Rule
 
-If you cannot reason shapes fast, debugging CNN later becomes painful.
+- [ ] Keep the week limited to these four tracks only
+- [ ] Produce one concrete artifact for each study track
+- [ ] Use daily notes for day-specific blocks; do not expand this file midweek
 
-Deliverable:
+## Done When
 
-- Implement matrix multiplication manually (small case)
-    
-- Write shape reasoning examples
-    
-
----
-
-## 3. Eigenvalues & Why They Matter (Day 3)
-
-You don’t need full spectral theory.
-
-You must understand:
-
-- Definition:  
-    [  
-    Av = \lambda v  
-    ]
-    
-- Intuition: scaling directions
-    
-- Why large eigenvalues cause instability in optimization
-    
-
-Connection:  
-Learning rate must relate to curvature.
-
-Deliverable:
-
-- Compute eigenvalues of 2×2 matrix
-    
-- Explain in 1 page:  
-    “Why curvature affects gradient descent stability”
-    
-
----
-
-## 4. Derivatives & Gradients (Day 4)
-
-Topics:
-
-- Derivative of:
-    
-    - x²
-        
-    - sigmoid
-        
-    - softmax (basic idea)
-        
-- Partial derivatives
-    
-- Gradient vector
-    
-
-Understand:  
-Gradient = direction of steepest ascent.
-
-Deliverable:
-
-- Derive gradient of MSE for linear regression
-    
-- Verify with finite differences (numerically)
-    
-
----
-
-## 5. Gradient Descent (Day 5–6)
-
-Topics:
-
-- Update rule:  
-    [  
-    \theta \leftarrow \theta - \eta \nabla L(\theta)  
-    ]
-    
-- Learning rate effect
-    
-- Convex vs non-convex
-    
-- Loss surface intuition
-    
-
-Critical:  
-Explain why too large η causes divergence.
-
-Deliverable:
-
-- Implement gradient descent for linear regression
-    
-- Plot:
-    
-    - Convergence for small η
-        
-    - Divergence for large η
-        
-
----
-
-# Week 2 — Probability + Backpropagation
-
-Goal: Understand generalization and error behavior.
-
----
-
-## 1. Random Variables & Expectation (Day 1)
-
-Topics:
-
-- Discrete vs continuous
-    
-- Expectation:  
-    [  
-    \mathbb{E}[X]  
-    ]
-    
-- Variance:  
-    [  
-    Var(X)  
-    ]
-    
-
-Why:  
-Test accuracy is a random variable.
-
-Deliverable:
-
-- Simulate random variable in code
-    
-- Show empirical mean converges
-    
-
----
-
-## 2. Bias–Variance Decomposition (Day 2)
-
-Understand:
-
-Error = Bias² + Variance + Noise
-
-Conceptually, not full formal proof.
-
-Explain:
-
-- High bias → underfitting
-    
-- High variance → overfitting
-    
-
-Deliverable:  
-1-page explanation using your own words.
-
----
-
-## 3. Cross-Entropy & Logistic Regression (Day 3)
-
-Topics:
-
-- Sigmoid function
-    
-- Log-loss
-    
-- Why cross-entropy works better than MSE for classification
-    
-
-Derive gradient of logistic regression.
-
-Deliverable:
-
-- Implement logistic regression from scratch
-    
-- Compare with MSE classification
-    
-
----
-
-## 4. Chain Rule & Backpropagation (Day 4–5)
-
-Core concept:
-
-If:  
-[  
-L = f(g(h(x)))  
-]
-
-Then:  
-[  
-\frac{dL}{dx} = \frac{dL}{df} \cdot \frac{df}{dg} \cdot \frac{dg}{dh} \cdot \frac{dh}{dx}  
-]
-
-You must derive backprop for:
-
-1 hidden layer network:
-
-- Forward pass
-    
-- Compute loss
-    
-- Backward pass manually
-    
-
-Deliverable:
-
-- Write full gradient expressions
-    
-- Implement 1 hidden layer MLP from scratch (NumPy)
-    
-
-No PyTorch yet.
-
----
-
-## 5. Capacity & Overparameterization (Conceptual)
-
-Understand:
-
-- Parameters count vs data size
-    
-- Why bigger model fits noise
-    
-- Double descent (conceptually)
-    
-
-Write:  
-Short memo:  
-“Why deeper networks can memorize small datasets.”
-
----
-
-# What You Should Be Able To Do After 2 Weeks
-
-After 2 weeks, I will be able to derive and implement a 1-hidden-layer neural network without using deep learning libraries.
+- [ ] CNN notes or implementation is clearer than it was at the start of the week
+- [ ] Discrete math has one finished explanation or solved set
+- [ ] Calculus has one finished explanation or derivation
+- [ ] Evaluation metrics section is finished enough to reuse in the paper
