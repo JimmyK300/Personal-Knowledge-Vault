@@ -1,0 +1,148 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+
+\title{Evaluation Metrics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+To evaluate the performance of the trained models, we use several quantitative and qualitative metrics. These metrics measure overall predictive performance, class-specific behavior, and training dynamics.
+
+\section{Confusion Matrix}
+
+The primary evaluation tool is the confusion matrix.
+
+For a classification problem with $N$ classes, the confusion matrix is an $N \times N$ table where:
+
+\begin{itemize}
+	\item rows represent the true class labels,
+	\item columns represent the predicted class labels.
+\end{itemize}
+
+Each entry $CM_{i,j}$ indicates the number of samples whose true label is class $i$ but were predicted as class $j$. Correct predictions lie on the main diagonal of the matrix, while off-diagonal entries correspond to misclassifications.
+
+From the confusion matrix, we can define several quantities for a specific class $i$:
+
+\begin{itemize}
+	\item \textbf{True Positive ($\mathrm{TP}_i$):} samples correctly predicted as class $i$.
+	\item \textbf{False Positive ($\mathrm{FP}_i$):} samples predicted as class $i$ but belonging to another class.
+	\item \textbf{False Negative ($\mathrm{FN}_i$):} samples belonging to class $i$ but predicted as another class.
+	\item \textbf{True Negative ($\mathrm{TN}_i$):} samples that are neither predicted nor labeled as class $i$.
+\end{itemize}
+
+These values allow us to compute several evaluation metrics.
+
+\section{Overall Accuracy}
+
+The overall accuracy measures the proportion of correctly classified samples:
+
+$$
+\mathrm{Accuracy} = \frac{\text{number of correct predictions}}{\text{total number of samples}}
+$$
+
+Using the confusion matrix $CM$:
+
+$$
+\mathrm{Accuracy} = \frac{\mathrm{tr}(CM)}{\sum CM}
+$$
+
+where $\mathrm{tr}(CM)$ is the sum of the diagonal entries. Accuracy provides a high-level measure of model performance.
+
+\section{Class-Specific Reliability}
+
+Because per-class accuracy is mathematically inflated by high True Negative rates in multi-class problems, we rely on precision, recall, and the F1-score to rigorously evaluate the model's strength on individual classes.
+
+\begin{itemize}
+	\item \textbf{Precision ($\mathrm{Pre}_i$):} Measures prediction reliability. Of all samples predicted as class $i$, how many were actually class $i$?
+\end{itemize}
+
+$$
+\mathrm{Pre}_i = \frac{\mathrm{TP}_i}{\mathrm{TP}_i + \mathrm{FP}_i}
+$$
+
+\begin{itemize}
+	\item \textbf{Recall ($\mathrm{Rec}_i$):} Measures detection capability. Of all actual samples of class $i$, how many did the model correctly identify?
+\end{itemize}
+
+$$
+\mathrm{Rec}_i = \frac{\mathrm{TP}_i}{\mathrm{TP}_i + \mathrm{FN}_i}
+$$
+
+\begin{itemize}
+	\item \textbf{F1-Score ($\mathrm{F1}_i$):} The harmonic mean of precision and recall, providing a single balanced metric for class $i$ performance.
+\end{itemize}
+
+$$
+\mathrm{F1}_i = 2 \frac{\mathrm{Pre}_i \cdot \mathrm{Rec}_i}{\mathrm{Pre}_i + \mathrm{Rec}_i}
+$$
+
+We synthesize these into a comprehensive metrics table, calculating the macro-average, the unweighted mean of the per-class metrics, to ensure minority classes are weighted equally in the final evaluation.
+
+\section{Macro-Averaged Metrics}
+
+To summarize performance across all classes, we compute macro averages, which treat each class equally:
+
+$$
+\mathrm{Metric}_{\mathrm{macro}} = \frac{1}{N} \sum_{i=1}^{N} \mathrm{Metric}_i
+$$
+
+Macro-averaged precision, recall, and F1 provide a single metric describing performance across the entire dataset.
+
+\section{Metrics Summary Table}
+
+All class-level metrics are summarized in the following format:
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Class & Precision & Recall & F1 Score \\
+\midrule
+C1 &  &  &  \\
+C2 &  &  &  \\
+$\cdots$ &  &  &  \\
+CN &  &  &  \\
+\textbf{Macro Avg} &  &  &  \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+This table allows us to identify which classes the model handles well and which classes are more difficult.
+
+\section{Learning Curves and Generalization}
+
+To diagnose underfitting or overfitting during training, we plot learning curves mapping both accuracy and loss against epochs for both the training and validation sets.
+
+\begin{itemize}
+	\item \textbf{Healthy Learning:} Both training and test metrics improve synchronously.
+	\item \textbf{Overfitting:} Training loss continues to decrease while test loss stagnates or increases.
+	\item \textbf{Underfitting:} Both training and test metrics stall at suboptimal levels.
+\end{itemize}
+
+We quantify the model's ability to extrapolate to unseen data using the generalization gap. While often calculated as $(\text{Training Accuracy} - \text{Test Accuracy})$, the gap between training and test loss serves as a more sensitive early-warning indicator of overfitting.
+
+\section{Qualitative Error Analysis}
+
+Statistical metrics identify where the model fails; qualitative analysis determines why. By isolating and reviewing misclassified samples, false positives and false negatives, we categorize errors into systematic vulnerabilities:
+
+\begin{itemize}
+	\item \textbf{Ambiguous Digits:} Cases where the input is objectively difficult to discern, for example a poorly drawn ``4'' resembling a ``9''.
+	\item \textbf{Feature Mismatch:} Consistent confusion between structurally similar classes.
+\end{itemize}
+
+\section{Writer Bias}
+
+Finally, we measure writer bias to evaluate whether the model performs unevenly across different handwriting styles. Let $A_i$ denote the accuracy on samples written by writer $i$. The bias is defined as:
+
+$$
+\mathrm{WriterBias} = \max(A_i) - \min(A_i)
+$$
+
+A large value indicates that the model performs significantly better on some writers than others.
+
+\end{document}
